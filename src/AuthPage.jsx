@@ -18,7 +18,7 @@ const AuthPage = (props) => {
   const onSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3001/authenticate", { username: username, secret: password })
+      .post("https://chat-app-khqt.onrender.com/authenticate", { username: username, secret: password })
       .then((r) => props.onAuth({ ...r.data, secret: password }))
       .catch((e) => console.log("Auth Error", e));
   };
